@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <title>Angus Hsu</title>
+    <meta name="title" content="Angus Hsu"/>
+    <meta
+            name="description"
+            content="A software engineer in Taiwan, focus on applying the principles of engineering to software development."
+    />
+
+    <!--    Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.angushsu.me/"/>
+    <meta property="og:title" content="Angus Hsu"/>
+    <meta
+            property="og:description"
+            content="A software engineer in Taiwan, focus on applying the principles of engineering to software development."
+    />
+    <meta
+            property="og:image"
+            content="https://angushsu.me/images/AH-seo.png"
+    />
+
+    <!--    Twitter  -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="https://www.angushsu.me/"/>
+    <meta property="twitter:title" content="Angus Hsu"/>
+    <meta
+            property="twitter:description"
+            content="A software engineer in Taiwan, focus on applying the principles of engineering to software development."
+    />
+    <meta
+            property="twitter:image"
+            content="https://angushsu.me/images/AH-seo.png"
+    />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/default.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/layout.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/media-queries.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/all.min.css">
+    <!--  Tailwindcss  -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/output.css">
+
+    <!-- Favicons   -->
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="%PUBLIC_URL%/images/favicons/favicon-32x32.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="%PUBLIC_URL%/images/favicons/favicon-96x96.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="%PUBLIC_URL%/images/favicons/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link
+          async
+          rel="stylesheet"
+          href="%PUBLIC_URL%/css/semantic.min.css"
+    />
+
+</head>
+
+<body>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+<div id="root"></div>
+<!-- fontawesome -->
+<script src="js/all.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGXDPZVYSW"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-FGXDPZVYSW');
+
+</script>
+
+</body>
+</html>
