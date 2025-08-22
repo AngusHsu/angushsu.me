@@ -149,6 +149,7 @@ export const skills: string[] = [
   "MongoDB",
   "Docker",
   "AWS",
+  "Shell",
   "E2E Testing"
 ];
 

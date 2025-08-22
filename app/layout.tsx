@@ -5,7 +5,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Angus Hsu - Full Stack Developer & Software Engineer',
+    default: 'Angus Hsu - Software Engineer',
     template: '%s | Angus Hsu'
   },
   description: 'Innovative full-stack developer specializing in React, Next.js, Node.js, and scalable web applications. Expert in modern web technologies with proven track record in building high-performance solutions.',
