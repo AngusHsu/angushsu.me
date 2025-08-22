@@ -137,38 +137,19 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const skills: string[] = [
-  // Frontend Technologies
   "React",
-  "Next.js", 
-  "TypeScript",
-  "JavaScript",
-  "HTML5",
-  "CSS3",
+  "Webpack",
+  "Next.js",
   "Tailwind CSS",
-  
-  // Backend Technologies
-  "Node.js",
+  "Jest",
   "Python",
-  "FastAPI",
-  "Express.js",
-  "REST APIs",
-  
-  // Database & Storage
+  "Node.js",
+  "NestJS",
   "PostgreSQL",
   "MongoDB",
-  "Redis",
-  
-  // DevOps & Cloud
   "Docker",
   "AWS",
-  "Git",
-  "CI/CD",
-  
-  // Testing & Tools
-  "Jest",
-  "Cypress",
-  "Storybook",
-  "Webpack"
+  "E2E Testing"
 ];
 
 export const education: Education[] = [

@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  portfolio:
+    image: angus-portfolio:arm64
+    container_name: angus-portfolio
+    restart: unless-stopped
+    ports:
+      # Expose port 611 publicly for direct access
+      - "611:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    networks:
+      - portfolio-network
+    volumes:
+      # Mount logs for easier access
+      - ./logs:/app/logs
+      # Optional: Mount for persistent data
+      - portfolio-data:/app/data
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # Raspberry Pi specific settings
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 256M
+    labels:
+      - "com.docker.compose.project=angus-portfolio"
+      - "com.docker.compose.service=portfolio"
+
+networks:
+  portfolio-network:
+    driver: bridge
+    name: angus-portfolio-network
+
+volumes:
+  portfolio-data:
+    driver: local
+    name: angus-portfolio-data

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { PersonalInfo } from "@/lib/data";
@@ -81,9 +81,10 @@ export function HeroSection({ personalInfo }: HeroSectionProps) {
                   <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href={`mailto:${personalInfo.email}`}>
-                  Get In Touch
+              <Button asChild variant="outline" size="lg" className="group">
+                <Link href="https://line-bot-pictures-angushsu.s3.ap-northeast-1.amazonaws.com/Angus+Hsu+Resume.pdf" target="_blank" rel="noopener noreferrer" download="Angus_Hsu_Resume.pdf">
+                  <Download className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
+                  Download Resume
                 </Link>
               </Button>
             </div>
