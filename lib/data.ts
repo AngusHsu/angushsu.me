@@ -74,7 +74,8 @@ export interface ResumeData {
 export const portfolioProjects: Project[] = [
   {
     title: "EMQQQ",
-    description: "This Line bot is designed to keep you entertained, informed, and organized—all in one place!",
+    description:
+      "This Line bot is designed to keep you entertained, informed, and organized—all in one place!",
     image: "emqqq.png",
     url: "https://emqqq.com",
     tags: ["Line Bot", "Node.js", "API Integration"],
@@ -82,7 +83,8 @@ export const portfolioProjects: Project[] = [
   },
   {
     title: "LinkLoom",
-    description: "A simple and fast website for shortening and managing URLs efficiently.",
+    description:
+      "A simple and fast website for shortening and managing URLs efficiently.",
     image: "linkloom.png",
     url: "https://linkloom.link",
     tags: ["React", "URL Shortener", "Web App"],
@@ -90,10 +92,20 @@ export const portfolioProjects: Project[] = [
   },
   {
     title: "Identique",
-    description: "A fast and secure website for instantly validating ID numbers with accuracy and ease.",
+    description:
+      "A fast and secure website for instantly validating ID numbers with accuracy and ease.",
     image: "identique.png",
     url: "https://identique.org",
     tags: ["Validation", "Security", "Web App"],
+    featured: true,
+  },
+  {
+    title: "FurMen",
+    description:
+      "Modern pet care management platform with React and NestJS backend",
+    image: "furmen.png",
+    url: "https://furmen.net",
+    tags: ["React", "TypeScript", "React Native", "NestJS"],
     featured: true,
   },
 ];
@@ -101,10 +113,12 @@ export const portfolioProjects: Project[] = [
 export const personalInfo: PersonalInfo = {
   name: "Angus Hsu",
   occupation: "Software Engineer",
-  description: "Innovative software developer with experience in designing, developing, and deploying scalable solutions. Skilled in front-end and back-end development, SDLC, and cross-functional collaboration. Proficient in modern languages and frameworks, focused on secure, efficient, and user-friendly applications.",
+  description:
+    "Innovative software developer with experience in designing, developing, and deploying scalable solutions. Skilled in front-end and back-end development, SDLC, and cross-functional collaboration. Proficient in modern languages and frameworks, focused on secure, efficient, and user-friendly applications.",
   image: "angus-self.jpg",
   bio: "Innovative software developer with experience in designing, developing, and deploying scalable solutions. Skilled in front-end and back-end development, SDLC, and cross-functional collaboration. Proficient in modern languages and frameworks, focused on secure, efficient, and user-friendly applications.",
-  contactMessage: "Please contact me if you've any interest in what I've post here!!",
+  contactMessage:
+    "Please contact me if you've any interest in what I've post here!!",
   email: "apangus611@gmail.com",
   phone: "+886-918540249",
   address: {
@@ -150,7 +164,7 @@ export const skills: string[] = [
   "Docker",
   "AWS",
   "Shell",
-  "E2E Testing"
+  "E2E Testing",
 ];
 
 export const education: Education[] = [
@@ -161,7 +175,7 @@ export const education: Education[] = [
     endDate: "Sep 2020",
   },
   {
-    school: "National Chung Cheng University", 
+    school: "National Chung Cheng University",
     degree: "Communication Engineering (Bachelor's Degree)",
     startDate: "Sep 2012",
     endDate: "Jun 2016",
