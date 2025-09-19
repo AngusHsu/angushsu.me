@@ -1,7 +1,11 @@
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import { Navigation } from '@/components/navigation';
 import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
+
+const GA_TRACKING_ID = 'G-FGXDPZVYSW';
+const isProduction = process.env.NODE_ENV === 'production';
 
 export const metadata: Metadata = {
   title: {
@@ -107,6 +111,22 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {isProduction && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
