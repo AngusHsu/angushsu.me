@@ -78,7 +78,7 @@ export const portfolioProjects: Project[] = [
       "This Line bot is designed to keep you entertained, informed, and organized—all in one place!",
     image: "emqqq.png",
     url: "https://emqqq.com",
-    tags: ["Line Bot", "Node.js", "API Integration"],
+    tags: ["Line Bot", "Node.js", "MCP", "LLM Integration"],
     featured: true,
   },
   {
@@ -87,7 +87,7 @@ export const portfolioProjects: Project[] = [
       "A simple and fast website for shortening and managing URLs efficiently.",
     image: "linkloom.png",
     url: "https://linkloom.link",
-    tags: ["React", "URL Shortener", "Web App"],
+    tags: ["React", "TypeScript", "Node.js"],
     featured: true,
   },
   {
@@ -96,7 +96,7 @@ export const portfolioProjects: Project[] = [
       "A fast and secure website for instantly validating ID numbers with accuracy and ease.",
     image: "identique.png",
     url: "https://identique.org",
-    tags: ["Validation", "Security", "Web App"],
+    tags: ["React", "TypeScript", "FastAPI"],
     featured: true,
   },
   {
@@ -105,7 +105,16 @@ export const portfolioProjects: Project[] = [
       "Modern pet care management platform with React and NestJS backend",
     image: "furmen.png",
     url: "https://furmen.net",
-    tags: ["React", "TypeScript", "React Native", "NestJS"],
+    tags: ["React", "TypeScript", "NestJS"],
+    featured: true,
+  },
+  {
+    title: "tm1npm",
+    description:
+      "NPM package providing TypeScript utilities for IBM Planning Analytics (TM1) API integration",
+    image: "tm1npm.png",
+    url: "https://www.npmjs.com/package/tm1npm",
+    tags: ["TypeScript", "NPM", "IBM Planning Analytics"],
     featured: true,
   },
 ];
@@ -188,10 +197,9 @@ export const workExperience: WorkExperience[] = [
     title: "Web developer",
     years: "Jan 2022 - Present",
     description: [
-      "Designed and developed an automated system capable of exporting reports to designated locations at predetermined times, streamlining data dissemination and ensuring timely access.",
-      "Established a zero-to-one web product, overseeing its development from concept to launch, as an OLAP extension web service built with FastAPI and React.",
-      "Developed a multi-page web service for comprehensive yearly expense planning, enabling users to organize and track their financial goals efficiently. The application features an intuitive interface for budgeting, forecasting, and managing expenses across different categories.",
-      "Developed and designed a Next.js web page that utilizes multiple Handsontable modules with extensive custom styling, handling and organizing large amounts of table data to enhance user-friendliness and efficiency.",
+      "Designed and developed an automated reporting system using Flask, PostgreSQL, and React that consolidates data across company products into interactive dashboards—delivering daily revenue, customer, and product insights to 10+ stakeholders and eliminating over 10 hours of manual reporting work company-wide.",
+      "Built an AI-powered analytics platform with a React/TypeScript frontend and FastAPI backend, implementing the Model Context Protocol to bridge IBM Planning Analytics with conversational AI assistants (Copilot Studio, LibreChat). Reduced query complexity by 80% and enabled 100+ non-technical users to access enterprise OLAP data through natural-language queries.",
+      "Collaborated with UK colleagues to develop a Next.js web application utilizing Handsontable modules for efficiently managing datasets exceeding 100,000 rows across 20+ columns—achieving a 60% improvement in processing speed and 45% boost in user productivity while eliminating heavy Excel-based workflows.",
     ],
   },
   {
@@ -199,12 +207,10 @@ export const workExperience: WorkExperience[] = [
     title: "Software developer",
     years: "Aug 2019 - Jan 2022",
     description: [
-      "Enhanced the development experience of the internal website by migrating from jQuery to React, integrating RBAC (Role-Based Access Control) modules, and collaborating closely with backend engineers to ensure seamless implementation.",
-      "Developed a customer-facing API documentation website using OpenAPI 3.0 and ReDoc.",
-      "Developed a cross-product frontend component library using React and Storybook.",
-      "Developed an e2e testing environment for websites using Docker, TestCafe, and AWS tools.",
-      "Developed a Windows-compatible program using Puppeteer to parallelly retrieve transaction receipts from an online banking system.",
-      "Implemented an AWS SAM function to fetch daily exchange rates from the bank and update them in Google Sheets automatically.",
+      "Modernized the internal website by migrating from jQuery to React and integrating Role-Based Access Control (RBAC) modules—enhancing performance, improving user experience, and enabling secure access management for 100+ users.",
+      "Developed a cross-product React component library with Storybook to standardize UI patterns across internal applications—accelerating frontend development and ensuring consistent design quality.",
+      "Collaborated with the team to architect a containerized end-to-end testing environment using Docker, TestCafe, and AWS to automate regression testing—eliminating one hour of daily manual QA work and detecting bugs before production release.",
+      "Built an AWS SAM–based serverless function to automate daily exchange rate retrieval and Google Sheets updates—removing manual data entry and ensuring real-time currency accuracy.",
     ],
   },
   {
