@@ -14,11 +14,11 @@ interface HeroSectionProps {
 export function HeroSection({ personalInfo }: HeroSectionProps) {
   const getSocialIcon = (name: string) => {
     switch (name.toLowerCase()) {
-      case 'github':
+      case "github":
         return <Github className="h-5 w-5" />;
-      case 'linkedin':
+      case "linkedin":
         return <Linkedin className="h-5 w-5" />;
-      case 'mail':
+      case "mail":
         return <Mail className="h-5 w-5" />;
       default:
         return <ExternalLink className="h-5 w-5" />;
@@ -45,7 +45,7 @@ export function HeroSection({ personalInfo }: HeroSectionProps) {
                 {personalInfo.occupation}
               </h2>
             </div>
-            
+
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
               {personalInfo.description}
             </p>
@@ -82,7 +82,12 @@ export function HeroSection({ personalInfo }: HeroSectionProps) {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="group">
-                <Link href="https://line-bot-pictures-angushsu.s3.ap-northeast-1.amazonaws.com/Angus+Hsu+Resume.pdf" target="_blank" rel="noopener noreferrer" download="Angus_Hsu_Resume.pdf">
+                <Link
+                  href="https://drive.google.com/file/d/1i-caH2CWhDK6iQQTrmyO6jDCyFGljyCo/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Angus_Hsu_Resume.pdf"
+                >
                   <Download className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
                   Download Resume
                 </Link>
