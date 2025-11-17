@@ -108,15 +108,15 @@ export const portfolioProjects: Project[] = [
     tags: ["React", "TypeScript", "NestJS"],
     featured: true,
   },
-  {
-    title: "tm1npm",
-    description:
-      "NPM package providing TypeScript utilities for IBM Planning Analytics (TM1) API integration",
-    image: "tm1npm.png",
-    url: "https://www.npmjs.com/package/tm1npm",
-    tags: ["TypeScript", "NPM", "IBM Planning Analytics"],
-    featured: true,
-  },
+  // {
+  //   title: "tm1npm",
+  //   description:
+  //     "NPM package providing TypeScript utilities for IBM Planning Analytics (TM1) API integration",
+  //   image: "tm1npm.png",
+  //   url: "https://www.npmjs.com/package/tm1npm",
+  //   tags: ["TypeScript", "NPM", "IBM Planning Analytics"],
+  //   featured: true,
+  // },
 ];
 
 export const personalInfo: PersonalInfo = {
