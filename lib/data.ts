@@ -197,9 +197,9 @@ export const workExperience: WorkExperience[] = [
     title: "Web developer",
     years: "Jan 2022 - Present",
     description: [
-      "Designed and developed an automated reporting system using Flask, PostgreSQL, and React that consolidates data across company products into interactive dashboards—delivering daily revenue, customer, and product insights to 10+ stakeholders and eliminating over 10 hours of manual reporting work company-wide.",
-      "Built an AI-powered analytics platform with a React/TypeScript frontend and FastAPI backend, implementing the Model Context Protocol to bridge IBM Planning Analytics with conversational AI assistants (Copilot Studio, LibreChat). Reduced query complexity by 80% and enabled 100+ non-technical users to access enterprise OLAP data through natural-language queries.",
-      "Collaborated with UK colleagues to develop a Next.js web application utilizing Handsontable modules for efficiently managing datasets exceeding 100,000 rows across 20+ columns—achieving a 60% improvement in processing speed and 45% boost in user productivity while eliminating heavy Excel-based workflows.",
+      "Designed and developed a reporting product using Flask and React that consolidates multi-source data into interactive dashboards—delivering daily revenue, customer, and product insights while eliminating 10+ hours/week of manual reporting.",
+      "Built an AI-powered analytics product with a React/TypeScript frontend and FastAPI backend, integrating the Model Context Protocol to provide natural-language access to IBM Planning Analytics. Reduced query complexity by 80% and enabled 100+ non-technical users to access enterprise OLAP data effortlessly.",
+      "Collaborated with UK engineering teams to create a scalable Next.js + Handsontable data tool supporting 100,000+ rows across 20+ columns, achieving a 60% improvement in processing speed and a 45% boost in productivity while replacing Excel-heavy workflows.",
     ],
   },
   {
@@ -207,10 +207,10 @@ export const workExperience: WorkExperience[] = [
     title: "Software developer",
     years: "Aug 2019 - Jan 2022",
     description: [
-      "Modernized the internal website by migrating from jQuery to React and integrating Role-Based Access Control (RBAC) modules—enhancing performance, improving user experience, and enabling secure access management for 100+ users.",
-      "Developed a cross-product React component library with Storybook to standardize UI patterns across internal applications—accelerating frontend development and ensuring consistent design quality.",
-      "Collaborated with the team to architect a containerized end-to-end testing environment using Docker, TestCafe, and AWS to automate regression testing—eliminating one hour of daily manual QA work and detecting bugs before production release.",
-      "Built an AWS SAM–based serverless function to automate daily exchange rate retrieval and Google Sheets updates—removing manual data entry and ensuring real-time currency accuracy.",
+      "Modernized EMQ's internal web platform by migrating from jQuery to React and implementing Role-Based Access Control—improving performance, user experience, and secure access management for 100+ internal users.",
+      "Developed a shared React component library with Storybook to standardize UI patterns across multiple internal applications, accelerating development and improving design consistency.",
+      "Architected a containerized E2E testing environment using Docker, TestCafe, and AWS to automate regression testing—eliminating 1 hour of daily manual QA and catching defects earlier.",
+      "Built an AWS SAM serverless job to automate daily exchange-rate retrieval and Google Sheets updates, removing manual data entry and ensuring real-time currency accuracy for internal operations.",
     ],
   },
   {
