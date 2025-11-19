@@ -42,3 +42,4 @@ docker-compose.pi*.yml
 DEPLOY-RASPBERRY-PI.md
 deploy.sh
 
+tsconfig.tsbuildinfo
