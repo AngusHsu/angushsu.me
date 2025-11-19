@@ -180,7 +180,7 @@ export const education: Education[] = [
   {
     school: "National Taiwan University",
     degree: "Communication Engineering (Master's Degree)",
-    startDate: "Sep 2018",
+    startDate: "Sep 2016",
     endDate: "Sep 2020",
   },
   {

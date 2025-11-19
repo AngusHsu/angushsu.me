@@ -14,6 +14,26 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const getScrollBehavior = useCallback((): ScrollBehavior => {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  }, []);
+
+  const scrollToElement = useCallback((targetId: string, behavior: ScrollBehavior): boolean => {
+    if (!targetId) {
+      window.scrollTo({ top: 0, behavior });
+      return true;
+    }
+
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - HEADER_HEIGHT;
+      window.scrollTo({ top: offsetPosition, behavior });
+      return true;
+    }
+    return false;
+  }, []);
+
   useEffect(() => {
     let ticking = false;
 
@@ -31,40 +51,60 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handlePopState = () => {
+      const hash = window.location.hash;
+      const behavior = getScrollBehavior();
+      const targetId = hash ? hash.replace("#", "") : "";
+      scrollToElement(targetId, behavior);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [getScrollBehavior, scrollToElement]);
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const targetId = window.location.hash.replace("#", "");
+      const behavior = getScrollBehavior();
+
+      requestAnimationFrame(() => {
+        scrollToElement(targetId, behavior);
+      });
+    }
+  }, [getScrollBehavior, scrollToElement]);
+
+  const updateUrlHash = useCallback((hash: string): void => {
+    const newUrl = hash === "#"
+      ? window.location.pathname + window.location.search
+      : window.location.pathname + window.location.search + hash;
+
+    history.pushState(null, "", newUrl);
+  }, []);
+
   const handleNavClick = useCallback((href: string): void => {
     setIsMobileMenuOpen(false);
 
     try {
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const behavior = prefersReducedMotion ? "auto" : "smooth";
+      const behavior = getScrollBehavior();
+      const targetId = href === "#" ? "" : href.replace("#", "");
 
-      if (href === "#") {
-        window.scrollTo({ top: 0, behavior });
-        return;
-      }
-
-      const targetId = href.replace("#", "");
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - HEADER_HEIGHT;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior
-        });
+      if (scrollToElement(targetId, behavior)) {
+        updateUrlHash(href);
       }
     } catch (error) {
       console.error("Error during scroll navigation:", error);
-      // Fallback to default anchor behavior
-      const targetId = href.replace("#", "");
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView();
+      const targetId = href === "#" ? "" : href.replace("#", "");
+
+      if (scrollToElement(targetId, "auto")) {
+        try {
+          updateUrlHash(href);
+        } catch {
+          // Silently fail if pushState also fails
+        }
       }
     }
-  }, []);
+  }, [getScrollBehavior, scrollToElement, updateUrlHash]);
 
   const navItems = [
     { href: "#", label: "Home" },
