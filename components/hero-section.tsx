@@ -83,7 +83,7 @@ export function HeroSection({ personalInfo }: HeroSectionProps) {
               </Button>
               <Button asChild variant="outline" size="lg" className="group">
                 <Link
-                  href="https://drive.google.com/file/d/1i-caH2CWhDK6iQQTrmyO6jDCyFGljyCo/view"
+                  href="https://line-bot-pictures-angushsu.s3.ap-northeast-1.amazonaws.com/Angus+Hsu+Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Angus_Hsu_Resume.pdf"
